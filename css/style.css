@@ -81,15 +81,55 @@ nav {
 .nav-links a.active { color: var(--purple); text-decoration: none; }
 
 /* ── Hero ── */
+.hero-wrap {
+  position: relative;
+  overflow: hidden;
+  background: #FAFAF7;
+}
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+.hero-bg svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+/* left fade so overlaid text stays readable */
+.hero-bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg,
+    #FAFAF7 0%,
+    rgba(250, 250, 247, 0.94) 28%,
+    rgba(250, 250, 247, 0.6) 46%,
+    rgba(250, 250, 247, 0) 64%);
+}
+/* gentle ambient drift */
+.hero-bg .hb-drift {
+  animation: hb-float 16s ease-in-out infinite alternate;
+}
+.hero-bg .hb-cluster {
+  animation: hb-float 22s ease-in-out infinite alternate-reverse;
+}
+@keyframes hb-float {
+  from { transform: translateY(0); }
+  to   { transform: translateY(9px); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-bg .hb-drift,
+  .hero-bg .hb-cluster { animation: none; }
+}
 .hero {
+  position: relative;
+  z-index: 1;
   max-width: var(--max);
   margin: 0 auto;
-  padding: clamp(3rem, 8vw, 6rem) var(--pad) clamp(2rem, 5vw, 4rem);
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 4rem;
-  align-items: center;
+  padding: clamp(3.5rem, 9vw, 7rem) var(--pad) clamp(3rem, 7vw, 5.5rem);
 }
+.hero-text { max-width: 560px; }
 .hero-eyebrow {
   font-size: 0.72rem;
   letter-spacing: 0.16em;
@@ -150,10 +190,6 @@ nav {
 .btn-primary:hover { background: #3d2068; text-decoration: none; }
 .btn-ghost { border: 1.5px solid var(--rule); color: var(--ink-soft); background: transparent; }
 .btn-ghost:hover { border-color: var(--purple); color: var(--purple); text-decoration: none; }
-
-/* ── Hero illustration ── */
-.hero-visual { position: relative; }
-.hero-visual svg { width: 100%; max-width: 400px; margin-left: auto; }
 
 /* ── Divider ── */
 .divider {
@@ -361,8 +397,12 @@ footer {
 
 /* ── Responsive ── */
 @media (max-width: 720px) {
-  .hero { grid-template-columns: 1fr; gap: 2rem; }
-  .hero-visual { display: none; }
+  .hero-bg::after {
+    background: linear-gradient(90deg,
+      rgba(250, 250, 247, 0.96) 0%,
+      rgba(250, 250, 247, 0.88) 55%,
+      rgba(250, 250, 247, 0.55) 100%);
+  }
   .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
 }
 @media (max-width: 480px) {
