@@ -575,6 +575,19 @@ footer {
 }
 .past-member .pm-body { flex: 1; }
 
+/* ── Social/profile link icons ── */
+.social-icon {
+  display: inline-flex;
+  align-items: center;
+  vertical-align: -3px;
+  width: 18px;
+  height: 18px;
+  color: var(--ink-faint);
+  transition: color 0.15s ease;
+}
+.social-icon:hover { color: var(--purple); }
+.social-icon svg { width: 100%; height: 100%; fill: currentColor; }
+
 /* ── Responsive ── */
 @media (max-width: 720px) {
   .hero-bg::after {
