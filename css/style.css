@@ -609,9 +609,9 @@ footer {
 .social-icon {
   display: inline-flex;
   align-items: center;
-  vertical-align: -3px;
-  width: 18px;
-  height: 18px;
+  vertical-align: -5px;
+  width: 24px;
+  height: 24px;
   color: var(--ink-faint);
   transition: color 0.15s ease;
 }
