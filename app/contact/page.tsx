@@ -1,6 +1,5 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
-import Link from 'next/link'
 import PageHeader from '@/components/sections/PageHeader'
 
 export const metadata: Metadata = { title: 'Contact — ECCE' }
@@ -36,12 +35,12 @@ export default function ContactPage() {
               </p>
               <p>Email: <a href="mailto:david.oneill@northwestern.edu">david.oneill@northwestern.edu</a></p>
               <p>
-                <Link href="https://www.mccormick.northwestern.edu/research-faculty/directory/profiles/oneill-david.html">
+                <a href="https://www.mccormick.northwestern.edu/research-faculty/directory/profiles/oneill-david.html" target="_blank" rel="noopener noreferrer">
                   Northwestern BME faculty page
-                </Link><br />
-                <Link href="https://www.mccormick.northwestern.edu/research/engineering-education-research-center/">
+                </a><br />
+                <a href="https://www.mccormick.northwestern.edu/research/engineering-education-research-center/" target="_blank" rel="noopener noreferrer">
                   Northwestern Center for Engineering Education Research (NCEER)
-                </Link>
+                </a>
               </p>
             </div>
           </div>
