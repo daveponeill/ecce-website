@@ -1,5 +1,7 @@
 import type { Metadata } from 'next'
 import { DM_Serif_Display, Inter } from 'next/font/google'
+import Nav from '@/components/layout/Nav'
+import Footer from '@/components/layout/Footer'
 import '../styles/globals.css'
 
 // next/font loads the font files optimally. globals.css references these fonts
@@ -30,7 +32,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${dmSerifDisplay.className} ${inter.className}`}>
-      <body>{children}</body>
+      <body>
+        <Nav />
+        {children}
+        <Footer />
+      </body>
     </html>
   )
 }
