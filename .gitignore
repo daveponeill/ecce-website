@@ -1,2 +1,5 @@
 docs/graphics-spec-research.md
 .DS_Store
+node_modules/
+.next/
+out/
