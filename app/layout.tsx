@@ -23,6 +23,7 @@ export const metadata: Metadata = {
   title: 'ECCE — Engineering Cognition, Culture & Education',
   description:
     'The ECCE group studies how engineers develop professional identity, how doctoral students navigate high-stakes milestones, and how mentorship and assessment cultures shape both.',
+  icons: { icon: '/ecce-website/images/LogoSquare.png' },
 }
 
 export default function RootLayout({

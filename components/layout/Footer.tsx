@@ -7,7 +7,7 @@ export default function Footer() {
       <div className="footer-grid">
         <div className="footer-brand">
           <Image
-            src="/images/LogoWide.png"
+            src="/images/LogoWide_Words.png"
             alt="ECCE"
             width={90}
             height={28}
@@ -20,7 +20,7 @@ export default function Footer() {
               McCormick School of Engineering
             </Link><br />
             Northwestern University<br />
-            2145 Sheridan Road, Tech M338 &middot; Evanston IL 60208
+            2145 Sheridan Road, Tech M335 &middot; Evanston IL 60208
           </p>
         </div>
         <nav className="footer-nav">
@@ -35,7 +35,7 @@ export default function Footer() {
         </nav>
       </div>
       <div className="footer-bottom">
-        <span>&copy; 2025 ECCE Lab, Northwestern University</span>
+        <span>&copy; 2026 ECCE Lab, Northwestern University</span>
         <span>Built with <Link href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</Link></span>
       </div>
     </footer>

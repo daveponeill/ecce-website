@@ -20,7 +20,7 @@ export default function Nav() {
       <div className="nav-inner">
         <Link href="/" className="nav-logo">
           <Image
-            src="/images/LogoWide.png"
+            src="/images/LogoWide_Words.png"
             alt="ECCE"
             width={120}
             height={36}

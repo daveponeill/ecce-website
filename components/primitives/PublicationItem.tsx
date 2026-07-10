@@ -7,6 +7,7 @@ export interface PublicationItemProps {
   year: number
   award?: string
   link?: string
+  id?: string
 }
 
 export default function PublicationItem({
@@ -16,6 +17,7 @@ export default function PublicationItem({
   year,
   award,
   link,
+  id,
 }: PublicationItemProps) {
   const titleEl = link ? (
     <Link href={link} target="_blank" rel="noopener">{title}</Link>
@@ -24,7 +26,7 @@ export default function PublicationItem({
   )
 
   return (
-    <li className="pub-item">
+    <li id={id} className="pub-item">
       <span dangerouslySetInnerHTML={{ __html: authors }} />{' '}
       {titleEl}{' '}
       <span className="pub-venue">{venue}, {year}.</span>

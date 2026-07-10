@@ -7,24 +7,28 @@ export const metadata: Metadata = { title: 'Publications — ECCE' }
 
 const engineeringEducationPubs: PublicationItemProps[] = [
   {
+    id: 'tabora-manion-oneill-2026-perma-v',
     authors: 'Tabora, J., Manion, K., and <strong>O\'Neill, D.P.</strong>',
     title: 'Reliability of PERMA-V(N): A Qualitative Coding Framework for Capturing Well-being Dimensions in Engineering Doctoral Students.',
     venue: '133rd ASEE Annual Conference, Charlotte NC [accepted]',
     year: 2026,
   },
   {
+    id: 'tabora-manion-oneill-2026-wellbeing-identity',
     authors: 'Tabora, J., Manion, K., and <strong>O\'Neill, D.P.</strong>',
     title: 'Similar on Paper, Different in Practice: Well-being and Identity Divergence During BME Doctoral Qualifying Examinations.',
     venue: '133rd ASEE Annual Conference, Charlotte NC [accepted]',
     year: 2026,
   },
   {
+    id: 'manion-tabora-oneill-2026-interview-prompts',
     authors: 'Manion, K., Tabora, J., and <strong>O\'Neill, D.P.</strong>',
     title: 'Comparing Broad and Focused Interview Prompts for Biomedical Engineering Doctoral Students Discussing Well-being and Identity.',
     venue: '133rd ASEE Annual Conference, Charlotte NC [accepted]',
     year: 2026,
   },
   {
+    id: 'cisneros-oneill-2025-asee',
     authors: 'Cisneros, E. and <strong>O\'Neill, D.P.</strong>',
     title: 'Comparing Implicit and Explicit Measurements of Engineering and Research Science Identities in Engineering Doctoral Students.',
     venue: '132nd ASEE Annual Conference, Montreal',
@@ -37,12 +41,14 @@ const engineeringEducationPubs: PublicationItemProps[] = [
     year: 2025,
   },
   {
+    id: 'tabora-oneill-2025-asee-wip',
     authors: 'Tabora, J., and <strong>O\'Neill, D.P.</strong>',
     title: 'Work in Progress: Exploring Qualifying Exam Experiences in Engineering Doctoral Students using Well-Being Constructs.',
     venue: '132nd ASEE Annual Conference, Montreal',
     year: 2025,
   },
   {
+    id: 'manion-denzler-strong-oneill-2025-office-hours',
     authors: 'Manion, K., Denzler, J., Strong, T.M., and <strong>O\'Neill, D.P.</strong>',
     title: 'Post-Pandemic Motivations and Barriers for Office Hours Attendance in Biomedical Engineering.',
     venue: '132nd ASEE Annual Conference, Montreal',
@@ -50,18 +56,21 @@ const engineeringEducationPubs: PublicationItemProps[] = [
     award: 'ASEE BED (Biomedical Engineering Division) Best DEI Paper Award',
   },
   {
+    id: 'oneill-2024-fie',
     authors: '<strong>O\'Neill, D.P.</strong>',
     title: 'Testing Aids and Their Impacts in Engineering Education: An Early Look at a Scoping Review.',
     venue: '2024 IEEE Frontiers in Education Conference (FIE), Washington DC',
     year: 2024,
   },
   {
+    id: 'ankeny-oneill-gentry-eshun-2024-asee',
     authors: 'Ankeny, C.J., <strong>O\'Neill, D.P.</strong>, Gentry, K., Eshun, P.',
     title: 'Effectiveness of Inclusive, Reflective Teaching Practices on Problem Solving Proficiency.',
     venue: '131st ASEE Annual Conference, Portland',
     year: 2024,
   },
   {
+    id: 'schafer-oneill-2023-asee-wip',
     authors: 'Schafer, E.A. and <strong>O\'Neill, D.P.</strong>',
     title: 'Work-in-Progress: Improving Student–Instructor Relationships and Help-seeking through Office Hours.',
     venue: '130th ASEE Annual Conference, Baltimore',
@@ -69,6 +78,7 @@ const engineeringEducationPubs: PublicationItemProps[] = [
     award: 'Best of Works-in-Progress Finalist',
   },
   {
+    id: 'ankeny-gentry-oneill-eshun-2023-asee-wip',
     authors: 'Ankeny, C.J., Gentry, K., <strong>O\'Neill, D.P.</strong>, Eshun, P.',
     title: 'Work-in-Progress: Can in-class peer reviews of written assignments improve problem solving and scientific writing in a standards-based, sophomore laboratory course?',
     venue: '130th ASEE Annual Conference, Baltimore',
@@ -76,30 +86,35 @@ const engineeringEducationPubs: PublicationItemProps[] = [
     award: 'Best of Works-in-Progress Finalist',
   },
   {
+    id: 'ankeny-adkins-oneill-2022-asee',
     authors: 'Ankeny, C.J., Adkins, A., <strong>O\'Neill, D.P.</strong>',
     title: 'Impact of Two Reflective Practices in an Engineering Laboratory Course using Standards-based Grading.',
     venue: '129th ASEE Annual Conference, Minneapolis',
     year: 2022,
   },
   {
+    id: 'oneill-2021-bme-education',
     authors: '<strong>O\'Neill, D.P.</strong>',
     title: 'Redesign of a BME Lab Class to Maintain Hands-on Experimentation Despite Remote Learning Constraints.',
     venue: 'Biomedical Engineering Education, 1: 229–235',
     year: 2021,
   },
   {
+    id: 'adkins-ankeny-oneill-2021-asee',
     authors: 'Adkins, A., Ankeny, C.J., <strong>O\'Neill, D.P.</strong>',
     title: 'Work-in-progress: Effectiveness of different reflection approaches for improving mastery in an engineering laboratory course.',
     venue: '128th ASEE Annual Conference, Online',
     year: 2021,
   },
   {
+    id: 'ankeny-oneill-beckmann-2020-asee',
     authors: 'Ankeny, C.J., <strong>O\'Neill, D.P.</strong>, Beckmann, L.',
     title: 'Work-in-progress: Comparison of a standards-based assessment to a traditional, summative rubric in a biomedical engineering laboratory.',
     venue: '127th ASEE Annual Conference, Online',
     year: 2020,
   },
   {
+    id: 'oneill-ankeny-2019-asee',
     authors: '<strong>O\'Neill, D.P.</strong>, Ankeny, C.J.',
     title: 'Work in progress: Aligning and assessing learning objectives for a biomedical engineering course sequence using standards-based grading within a learning management system.',
     venue: '126th ASEE Annual Conference, Tampa',
@@ -189,7 +204,7 @@ export default function PublicationsPage() {
       <PageHeader label="Our Work" title="Publications" />
       <section className="section">
         <div className="section-inner">
-          <PubSection category="Engineering Education" publications={engineeringEducationPubs} />
+          <PubSection id="engineering-education" category="Engineering Education" publications={engineeringEducationPubs} />
           <PubSection category="Other" publications={otherPubs} />
         </div>
       </section>
