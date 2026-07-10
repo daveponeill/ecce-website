@@ -27,6 +27,7 @@ export default function PeoplePage() {
               role="Professor of Instruction · Michael Jaharis Director of Experiential Learning"
               affiliation="Department of Biomedical Engineering, McCormick School of Engineering, Northwestern University"
               imageSrc="/images/headshots/david-oneill.jpg"
+              nameHref="https://www.mccormick.northwestern.edu/research-faculty/directory/profiles/oneill-david.html"
               linkedin="https://www.linkedin.com/in/davidponeill/"
               publicationsHref="/publications#engineering-education"
               bio={
@@ -117,11 +118,13 @@ export default function PeoplePage() {
                 name="Casey Ankeny"
                 affiliation="Dept. of Biomedical Engineering, Northwestern University"
                 imageSrc="/images/headshots/casey-ankeny.jpg"
+                href="https://www.mccormick.northwestern.edu/research-faculty/directory/profiles/ankeny-casey.html"
               />
               <CollaboratorItem
                 name="Rick McGee"
                 affiliation="Feinberg School of Medicine, Northwestern University"
                 imageSrc="/images/headshots/rick-mcgee.jpeg"
+                href="https://www.feinberg.northwestern.edu/faculty-profiles/az/profile.html?xid=17545"
               />
               <CollaboratorItem
                 name="Ken Gentry"

@@ -13,11 +13,12 @@ interface ProfileProps {
   linkedin?: string
   scholar?: string
   publicationsHref?: string
+  nameHref?: string
 }
 
 export default function Profile({
   name, credentials, pronouns, role, affiliation,
-  bio, imageSrc, linkedin, scholar, publicationsHref,
+  bio, imageSrc, linkedin, scholar, publicationsHref, nameHref,
 }: ProfileProps) {
   return (
     <div className="profile">
@@ -26,7 +27,11 @@ export default function Profile({
       </div>
       <div className="profile-body">
         <h3>
-          {name}{credentials && `, ${credentials}`}
+          {nameHref ? (
+            <Link href={nameHref}>{name}{credentials && `, ${credentials}`}</Link>
+          ) : (
+            <>{name}{credentials && `, ${credentials}`}</>
+          )}
           {pronouns && <span style={{ fontFamily: 'var(--sans)', fontSize: '0.85rem', fontWeight: 400, color: 'var(--ink-soft)', marginLeft: '0.5rem' }}>{pronouns}</span>}
         </h3>
         <p className="profile-role">
